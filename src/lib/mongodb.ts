@@ -1,6 +1,6 @@
 import { MongoClient } from 'mongodb';
 
-const uri = "mongodb+srv://summer:solstice@summer-delight.1qptins.mongodb.net/";
+const uri = process.env.MONGODB_URI as string;
 const options = {};
 
 // Variable to store the MongoClient connection promise
