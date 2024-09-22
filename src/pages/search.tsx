@@ -21,8 +21,7 @@ const SearchResults: React.FC = () => {
       if (query) {
         console.log("Query Param: ", query);
         try {
-          // const response = await fetch('/api/search'); // Adjust the API endpoint as needed
-          const response = await fetch("/user_list.json"); // Adjust the API endpoint as needed
+          const response = await fetch(`/api/search?query=${query}`)
           const data = await response.json();
           setResults(data);
         } catch (error) {
